@@ -41,7 +41,7 @@ class PurchasesController < ApplicationController
   # PATCH/PUT /purchases/1.json
   def update
     respond_to do |format|
-      if @purchase.update(purchase_params)
+      if @purchase.update(purchase_params)  #better than update_attributes
         format.html { redirect_to @purchase, notice: 'Purchase was successfully updated.' }
         format.json { head :no_content }
       else
